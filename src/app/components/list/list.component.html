@@ -12,11 +12,13 @@
             <input placeholder="Search for a country..." type="text" class="search-input" [(ngModel)]="searchText"
                 (keydown)="search($event)" [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
         </div>
-        <select [(ngModel)]="selectedRegion" class="filter" (change)="filter()"
+        <div class="select-container">
+            <select [(ngModel)]="selectedRegion" class="filter" (change)="filter()"
             [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
             <option value="">Filter by region</option>
             <option *ngFor="let region of regions" value="{{region}}">{{region}}</option>
         </select>
+        </div>
     </div>
     <div class="main-body">
         <div class="list-card" *ngFor="let country of countriesToDisplay"
