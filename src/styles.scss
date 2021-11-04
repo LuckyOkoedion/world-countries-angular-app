@@ -144,7 +144,6 @@ body {
   box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.246);
 }
 
-
 .main-body {
   width: 100%;
   min-height: 100vh;
@@ -207,8 +206,6 @@ body {
     padding-right: 3px;
   }
 
-  
-
   .filter {
     margin-left: 5px;
     margin-top: 10px;
@@ -218,6 +215,10 @@ body {
   .brand {
     font-size: 1em;
     margin-left: 10px;
+  }
+
+  .search-box {
+    min-height: 30px;
   }
 
   .search-box input {
