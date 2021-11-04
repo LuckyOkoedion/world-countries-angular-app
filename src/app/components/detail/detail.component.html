@@ -21,7 +21,8 @@
             <div class="extra-detail-description">
                 <div class="left-extra">
                     <div class="d-native-name"><b>Native Name: </b>{{theCountry?.nativeName}}</div>
-                    <div class="d-population"><b>Population: </b>{{(theCountry?.population).toLocaleString("en")}}</div>
+                    <div class="d-population"><b>Population: </b>{{(theCountry?.population)?.toLocaleString("en")}}
+                    </div>
                     <div class="d-region"><b>Region: </b>{{theCountry?.region}}</div>
                     <div class="d-subregion"><b>Sub Region: </b>{{theCountry?.subregion}}</div>
                     <div class="d-capital"><b>Capital: </b>{{theCountry?.capital}}</div>

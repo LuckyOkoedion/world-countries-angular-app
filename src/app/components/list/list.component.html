@@ -22,10 +22,10 @@
         <div class="list-card" *ngFor="let country of countriesToDisplay"
             [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}" (click)="toDetail(country.name)">
             <img src="{{country.flag}}" alt="" class="list-flag">
-            <div class="list-name">{{country.name}}</div>
-            <div class="list-population"><b>Population: </b>{{(country.population).toLocaleString("en")}}</div>
-            <div class="list-region"><b>Region: </b>{{country.region}}</div>
-            <div class="list-capital"><b>Capital: </b>{{country.capital}}</div>
+            <div class="list-name">{{country?.name}}</div>
+            <div class="list-population"><b>Population: </b>{{(country?.population)?.toLocaleString("en")}}</div>
+            <div class="list-region"><b>Region: </b>{{country?.region}}</div>
+            <div class="list-capital"><b>Capital: </b>{{country?.capital}}</div>
         </div>
     </div>
 </div>
