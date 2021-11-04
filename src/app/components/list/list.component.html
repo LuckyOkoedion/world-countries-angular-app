@@ -1,0 +1,31 @@
+<div class="list-container" [ngClass]="{'dark': darkMode, 'light': !darkMode}">
+    <div class="header" [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
+        <div class="brand">Where in the world?</div>
+        <div class="darkmode-switch">
+            <img class="darkmode-switch-icon" src="{{darkModeIcon}}" alt="">
+            <div class="darkmode-switch-text" (click)="setMode()">Dark Mode</div>
+        </div>
+    </div>
+    <div class="search-and-filter">
+        <div class="search-box" [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
+            <img class="search-icon" src="{{searchIcon}}" alt="">
+            <input placeholder="Search for a country..." type="text" class="search-input" [(ngModel)]="searchText"
+                (keydown)="search($event)" [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
+        </div>
+        <select [(ngModel)]="selectedRegion" class="filter" (change)="filter()"
+            [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}">
+            <option value="">Filter by region</option>
+            <option *ngFor="let region of regions" value="{{region}}">{{region}}</option>
+        </select>
+    </div>
+    <div class="main-body">
+        <div class="list-card" *ngFor="let country of countriesToDisplay"
+            [ngClass]="{'dark-accent': darkMode, 'light-accent': !darkMode}" (click)="toDetail(country.name)">
+            <img src="{{country.flag}}" alt="" class="list-flag">
+            <div class="list-name">{{country.name}}</div>
+            <div class="list-population"><b>Population: </b>{{(country.population).toLocaleString("en")}}</div>
+            <div class="list-region"><b>Region: </b>{{country.region}}</div>
+            <div class="list-capital"><b>Capital: </b>{{country.capital}}</div>
+        </div>
+    </div>
+</div>

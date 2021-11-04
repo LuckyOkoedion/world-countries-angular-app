@@ -1,0 +1,141 @@
+.detail-body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.goback {
+  height: 35px;
+  width: 100px;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.246);
+  margin-left: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.goback:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.goback img {
+  height: 50%;
+  margin-left: 15px;
+}
+
+.gobacktext {
+  margin-right: 15px;
+}
+
+.detail-flag {
+  width: 600px;
+  margin-left: 100px;
+}
+
+.detail-flag img {
+  width: 100%;
+}
+
+.detail-description {
+  margin-right: 100px;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40%;
+}
+
+.detail-name {
+  font-size: 2em;
+  font-weight: bolder;
+}
+
+.extra-detail-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.border-countries {
+  display: flex;
+  flex-direction: row;
+  //   justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-extra div {
+  margin-top: 10px;
+}
+
+.right-extra div {
+  margin-top: 10px;
+}
+
+.each-border-country {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.246);
+  margin-top: 10px;
+
+  &:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1234px) {
+  .detail-description {
+    margin-left: 100px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .detail-flag {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .goback {
+    margin-left: 5px;
+  }
+
+  .detail-flag {
+    margin-left: 5px;
+  }
+  .detail-body {
+    height: fit-content;
+    padding-bottom: 20px;
+    margin-top: 7px;
+  }
+  .detail-description {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .detail-name {
+    font-size: 1.2em;
+  }
+  .left-extra div {
+    font-size: 0.7em;
+  }
+  .right-extra div {
+    font-size: 0.7em;
+  }
+  .border-countries {
+    font-size: 0.7em;
+  }
+}
